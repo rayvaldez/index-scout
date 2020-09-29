@@ -1,3 +1,13 @@
+# Index Scout
+
+Index Scout is to be used in conjunction with the Football Index Website. It
+will allow experienced users to post ‘Scout Reports’ on current football players
+listed on the Index, for others to agree/disagree with, and to help new users
+scout for new players to invest in.
+
+A voting system also allows for users to quickly distinguish key attributes for
+each player. 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
