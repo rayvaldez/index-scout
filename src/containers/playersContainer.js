@@ -12,7 +12,7 @@ class PlayersContainer extends React.Component {
   render() {
     return(
       <div>
-        <Players/>
+        <Players players={this.props.players}/>
       </div>
     )
   }

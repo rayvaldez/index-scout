@@ -1,9 +1,13 @@
 import React from 'react'
 
-const Players = () => {
+const Players = (props) => {
   return (
     <div>
-      Players
+      {props.players.map(player =>
+        <li key={player.id}>
+          {player.name}
+        </li>
+      )}
     </div>
   )
 }
