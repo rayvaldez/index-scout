@@ -1,4 +1,5 @@
 import React from 'react'
+import {Route, Link} from 'react-router-dom'
 import Player from './Player'
 
 const Players = (props) => {
@@ -6,7 +7,7 @@ const Players = (props) => {
     <div>
       {props.players.map(player =>
         <div key={player.id}>
-          <Player player={player}/>
+          <Link to={`/players/${player.id}`}>{player.name}</Link>
         </div>
       )}
     </div>

@@ -1,7 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {Route, Switch} from 'react-router-dom'
 import {fetchPlayers} from '../actions/fetchPlayers'
 import Players from '../components/Players'
+import Player from '../components/Player'
 
 class PlayersContainer extends React.Component {
 
@@ -12,7 +14,10 @@ class PlayersContainer extends React.Component {
   render() {
     return(
       <div>
-        <Players players={this.props.players}/>
+        <Switch>
+          <Route path='/players/:id' render={(routerProps) => <Player {...routerProps} players={this.props.players}/>}/>
+          <Route path='/players' render={(routerProps) => <Players {...routerProps} players={this.props.players}/>}/>
+        </Switch>
       </div>
     )
   }
