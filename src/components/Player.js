@@ -5,7 +5,7 @@ import ReportsContainer from '../containers/ReportsContainer'
 const Player = (props) => {
 
   let player = props.players[props.match.params.id -1]
-
+  console.log(player)
   return (
     <div>
       <h2>
