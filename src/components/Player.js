@@ -1,5 +1,6 @@
 import React from 'react'
 import BadgesContainer from '../containers/BadgesContainer'
+import ReportsContainer from '../containers/ReportsContainer'
 
 const Player = (props) => {
 
@@ -17,6 +18,7 @@ const Player = (props) => {
         £{player ? player.price  :null}
       </p>
       <BadgesContainer player={player}/>
+      <ReportsContainer player={player}/>
     </div>
   )
 }
