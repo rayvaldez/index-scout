@@ -1,11 +1,12 @@
 import React from 'react'
+import BadgesContainer from '../containers/BadgesContainer'
 
 const Player = (props) => {
 
   let player = props.players[props.match.params.id -1]
 
   return (
-    <li>
+    <div>
       <h2>
         {player ? player.name : null}
       </h2>
@@ -15,7 +16,8 @@ const Player = (props) => {
         {player ? player.team  :null} <br/>
         £{player ? player.price  :null}
       </p>
-    </li>
+      <BadgesContainer player={player}/>
+    </div>
   )
 }
 
