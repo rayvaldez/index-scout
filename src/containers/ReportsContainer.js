@@ -7,7 +7,7 @@ class ReportsContainer extends React.Component {
   render() {
     return (
       <div>
-        <Reports reports={this.props.player && this.props.player.reports}/>
+        <Reports reports={this.props.player && this.props.player.reports} player={this.props.player}/>
         <ReportsInput player={this.props.player}/>
       </div>
     )
