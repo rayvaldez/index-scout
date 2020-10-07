@@ -13,6 +13,15 @@ export default function playerReducer(state = {players: []}, action) {
         }
       })
       return {...state, players: newState}
+    case 'DELETE_REPORT':
+      let newStateOne = state.players.map(player => {
+        if (player.id === action.payload.id) {
+          return action.payload
+        } else {
+          return player
+        }
+      })
+      return {...state, players: newStateOne}
     default:
       return state
   }
