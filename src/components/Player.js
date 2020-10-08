@@ -11,6 +11,9 @@ const Player = (props) => {
       <h2>
         {player ? player.name : null}
       </h2>
+      <div>
+        <img src={`/images/${player ? player.image : null }`} alt={`${player ? player.name : null}`} width="400" height="250"/>
+      </div>
       <p>
         {player ? player.age  :null} <br/>
         {player ? player.position  :null} <br/>
