@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import {connect} from 'react-redux'
-import {Route, Link} from 'react-router-dom'
-import PlayersContainer from './containers/playersContainer'
+import {connect} from 'react-redux';
+import {Route, Link} from 'react-router-dom';
+import PlayersContainer from './containers/playersContainer';
 import logo from './images/logo.png';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 class App extends React.Component {
 
