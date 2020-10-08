@@ -1,8 +1,32 @@
-* {
+.App {
   background-color: #01244d;
   color: white;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.card {
+  width: 300px;
+  height: 350px;
+  padding: 1px;
+  margin-bottom: 20px;
+}
+
+.card-body {
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.card-img {
+  height: 210px;
+}
+
+.card-title {
+  text-decoration: underline;
+}
+
+.card-text {
+  color: black;
 }
