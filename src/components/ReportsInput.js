@@ -1,6 +1,7 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {addReport} from '../actions/addReport'
+import React from 'react';
+import {connect} from 'react-redux';
+import {addReport} from '../actions/addReport';
+import { Button } from 'reactstrap';
 
 class ReportsInput extends React.Component {
 
@@ -25,12 +26,12 @@ class ReportsInput extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <form className="report-form" onSubmit={this.handleSubmit}>
         <label>Name</label><br/>
         <input type="text" name="name" value={this.state.name} onChange={this.handleChange} /><br/>
         <label>Report</label><br/>
-        <textarea name="content" value={this.state.content} onChange={this.handleChange} rows="6" cols="41"/><br/>
-        <input type="submit"/>
+        <textarea name="content" value={this.state.content} onChange={this.handleChange} rows="8" cols="100"/><br/>
+        <Button color="success" size="sm" type="submit">Submit</Button>
       </form>
     )
   }

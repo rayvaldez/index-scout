@@ -1,8 +1,7 @@
 import React from 'react';
 import {Route, Link} from 'react-router-dom';
-import Player from './Player';
 import PlayerCard from './PlayerCard';
-import {Container, Row, CardGroup} from 'reactstrap';
+import {Row, CardGroup} from 'reactstrap';
 
 const Players = (props) => {
   return (

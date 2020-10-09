@@ -1,8 +1,8 @@
-import React from 'react'
-import Badges from '../components/Badges'
-import BadgesInput from '../components/BadgesInput'
-import {connect} from 'react-redux'
-import {updateBadges} from '../actions/updateBadges'
+import React from 'react';
+import Badges from '../components/Badges';
+import BadgesInput from '../components/BadgesInput';
+import {connect} from 'react-redux';
+import {updateBadges} from '../actions/updateBadges';
 
 class BadgesContainer extends React.Component {
 

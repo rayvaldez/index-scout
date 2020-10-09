@@ -1,6 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {deleteReport} from '../actions/deleteReport'
+import { Button } from 'reactstrap';
 
 const Reports = (props) => {
 
@@ -11,9 +12,9 @@ const Reports = (props) => {
   return (
     <div>
       {props.reports && props.reports.map(report =>
-        <div key={report.id}>
-          <h4>{report.name} - Posted on - {report.created_at} <button onClick={() => handleDelete(report)}>Delete</button></h4>  <br/>
-          {report.content}
+        <div key={report.id} className="report">
+          <h4>{report.name} - Posted on - {report.created_at} <Button color="danger" size="sm" type="submit" onClick={() => handleDelete(report)}>Delete</Button></h4>  <br/>
+          <p id="report-content">{report.content}</p>
         </div>
       )}
     </div>
