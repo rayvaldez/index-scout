@@ -1,6 +1,9 @@
 import React from 'react';
+import Stars from './Stars'
+import Reports from './Reports'
 import BadgesContainer from '../containers/BadgesContainer';
 import ReportsContainer from '../containers/ReportsContainer';
+import {Link, Route} from 'react-router-dom'
 import { Container, Row, Col } from 'reactstrap';
 
 const Player = (props) => {
@@ -25,10 +28,22 @@ const Player = (props) => {
             Team - {player ? player.team  :null} <br/>
             Price - £{player ? player.price  :null}
           </p>
-          <BadgesContainer player={player}/>
+          <Stars badges={player ? player.badges : null}/>
+          <Link to={`/players/${player ? player.id : null}/reports`}>View or Submit a Report</Link>
+          <br/>
+          <Link to={`/players/${player ? player.id : null}/badges`}>Vote for Badges!</Link>
         </Col>
       </Row>
-      <ReportsContainer player={player}/>
+      <Route path={`/players/${player ? player.id : null}/reports`}
+        render={() => (
+          <ReportsContainer player={player ? player : null}/>
+        )}
+      />
+      <Route path={`/players/${player ? player.id : null}/badges`}
+        render={() => (
+          <BadgesContainer player={player ? player : null}/>
+        )}
+      />
     </Container>
   )
 }

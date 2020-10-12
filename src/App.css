@@ -1,3 +1,6 @@
+* {
+}
+
 .App {
   background-color: #01244d;
   color: white;
@@ -25,10 +28,12 @@
 
 .card-title {
   text-decoration: underline;
+  background-color: #f0f0f0;
 }
 
 .card-text {
   color: black;
+  background-color: #f0f0f0;
 }
 
 .btn-danger {
