@@ -20,7 +20,7 @@ class BadgesContainer extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="badges-container">
         <Badges badges={this.props.player && this.props.player.badges}/>
         <BadgesInput badges={this.props.player && this.props.player.badges} setStateBadge={this.setStateBadge} handleUpdate={this.handleUpdate}/>
       </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import Stars from './Stars'
-import Reports from './Reports'
 import BadgesContainer from '../containers/BadgesContainer';
 import ReportsContainer from '../containers/ReportsContainer';
 import {Link, Route} from 'react-router-dom'

@@ -1,5 +1,4 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom';
 import PlayerCard from './PlayerCard';
 import {Row, CardGroup} from 'reactstrap';
 
