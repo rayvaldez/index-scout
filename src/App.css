@@ -7,8 +7,8 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App link {
+  color: white;
 }
 
 .card {
@@ -103,4 +103,12 @@ div.player-show-badge {
 
 .badge-container {
   margin-bottom: 30px;
+}
+
+div.jumbotron {
+  background-color: #01244c;
+}
+
+div.jumbotron link{
+  color: white;
 }

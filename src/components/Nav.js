@@ -14,7 +14,7 @@ function Navigation() {
         <img src={`images/logo.png`} alt="Index Scout" width="100" height="90"/>
         <Nav className="mr-auto" navbar>
           <NavItem>
-            <NavLink href="/players">Home</NavLink>
+            <NavLink href="/home">Home</NavLink>
           </NavItem>
           <NavItem>
             <NavLink href="/players">Players</NavLink>
