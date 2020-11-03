@@ -1,7 +1,6 @@
 import React from 'react';
-import {Jumbotron, Button} from 'reactstrap';
-import {Link} from 'react-router-dom';
-
+import { Jumbotron, Button } from 'reactstrap';
+import { Link } from 'react-router-dom';
 
 const Landing = () => {
 
@@ -12,11 +11,13 @@ const Landing = () => {
         <br/>
         <p className="lead">Home of the latest and best advice for new investors</p>
         <hr className="my-2" />
-        <p>Find your next player <Link to="/players"><Button color="primary">  here</Button></Link></p>
+        <p>Find your next player <Link to="/players">
+          <Button color="primary">  here</Button></Link>
+        </p>
       </Jumbotron>
     </div>
   );
 
-}
+};
 
-export default Landing
+export default Landing;

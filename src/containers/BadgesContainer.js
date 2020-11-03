@@ -1,31 +1,32 @@
 import React from 'react';
 import Badges from '../components/Badges';
 import BadgesInput from '../components/BadgesInput';
-import {connect} from 'react-redux';
-import {updateBadges} from '../actions/updateBadges';
+import { connect } from 'react-redux';
+import { updateBadges } from '../actions/updateBadges';
 
 class BadgesContainer extends React.Component {
 
-  state = {}
+  state = {};
 
   setStateBadge = (key, value) => {
     this.setState({
-      [key]: value
-    })
-  }
+      [key]: value,
+    });
+  };
 
   handleUpdate = () => {
-    this.props.updateBadges(this.state, this.props.player.id)
-  }
+    this.props.updateBadges(this.state, this.props.player.id);
+  };
 
   render() {
     return (
       <div className="badges-container">
         <Badges badges={this.props.player && this.props.player.badges}/>
-        <BadgesInput badges={this.props.player && this.props.player.badges} setStateBadge={this.setStateBadge} handleUpdate={this.handleUpdate}/>
+        <BadgesInput badges={this.props.player && this.props.player.badges}
+        setStateBadge={this.setStateBadge} handleUpdate={this.handleUpdate}/>
       </div>
-    )
+    );
   }
 }
 
-export default connect(null, {updateBadges})(BadgesContainer)
+export default connect(null, { updateBadges })(BadgesContainer);

@@ -4,7 +4,7 @@ export function fetchPlayers() {
     .then(res => res.json())
     .then(players => dispatch({
       type: 'FETCH_PLAYERS',
-      payload: players
-    }))
-  }
+      payload: players,
+    }));
+  };
 }

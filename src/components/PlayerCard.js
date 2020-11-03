@@ -1,5 +1,5 @@
-import React from 'react'
-import {Link} from 'react-router-dom'
+import React from 'react';
+import { Link } from 'react-router-dom';
 import {
   Card, CardImg, CardText, CardBody,
   CardTitle, Col
@@ -20,7 +20,7 @@ const PlayerCard = (props) => {
         </CardBody>
       </Card>
     </Col>
-  )
-}
+  );
+};
 
-export default PlayerCard
+export default PlayerCard;

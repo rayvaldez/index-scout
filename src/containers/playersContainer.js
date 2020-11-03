@@ -1,32 +1,34 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {Route, Switch} from 'react-router-dom'
-import {fetchPlayers} from '../actions/fetchPlayers'
-import Players from '../components/Players'
-import Player from '../components/Player'
+import React from 'react';
+import { connect } from 'react-redux';
+import { Route, Switch } from 'react-router-dom';
+import { fetchPlayers } from '../actions/fetchPlayers';
+import Players from '../components/Players';
+import Player from '../components/Player';
 
 class PlayersContainer extends React.Component {
 
   componentDidMount() {
-    this.props.fetchPlayers()
+    this.props.fetchPlayers();
   }
 
   render() {
-    return(
+    return (
       <div>
         <Switch>
-          <Route path='/players/:id' render={(routerProps) => <Player {...routerProps} players={this.props.players}/>}/>
-          <Route path='/players' render={(routerProps) => <Players {...routerProps} players={this.props.players}/>}/>
+          <Route path='/players/:id' render={(routerProps) =>
+            <Player {...routerProps} players={this.props.players}/>}/>
+          <Route path='/players' render={(routerProps) =>
+            <Players {...routerProps} players={this.props.players}/>}/>
         </Switch>
       </div>
-    )
+    );
   }
 }
 
 const mapStateToProps = state => {
   return {
-    players: state.players
-  }
-}
+    players: state.players,
+  };
+};
 
-export default connect(mapStateToProps, {fetchPlayers})(PlayersContainer)
+export default connect(mapStateToProps, { fetchPlayers })(PlayersContainer);

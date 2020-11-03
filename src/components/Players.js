@@ -1,6 +1,6 @@
 import React from 'react';
 import PlayerCard from './PlayerCard';
-import {Row, CardGroup} from 'reactstrap';
+import { Row, CardGroup} from 'reactstrap';
 
 const Players = (props) => {
   return (
@@ -13,7 +13,7 @@ const Players = (props) => {
         )}
       </Row>
     </CardGroup>
-  )
-}
+  );
+};
 
-export default Players
+export default Players;
