@@ -11,7 +11,7 @@ function Navigation() {
   return (
     <div>
       <Navbar expand="md">
-        <img src={`images/logo.png`} alt="Index Scout" width="100" height="90"/>
+        <img src={`images/logo.png`} alt="Index Scout" width="240" height="220"/>
         <Nav className="mr-auto" navbar>
           <NavItem>
             <NavLink href="/home">Home</NavLink>
@@ -19,8 +19,10 @@ function Navigation() {
           <NavItem>
             <NavLink href="/players">Players</NavLink>
           </NavItem>
+          <NavItem>
+            <NavLink href="/about">About</NavLink>
+          </NavItem>
         </Nav>
-        <NavbarText>Scout your next player...</NavbarText>
       </Navbar>
     </div>
   );
