@@ -13,11 +13,11 @@ const Reports = (props) => {
     <div>
       {props.reports && props.reports.map(report =>
         <div key={report.id} className="report">
-          <h4>{report.name} - Posted on - {report.created_at}
+          <h5>{report.name} - Posted on - {report.created_at}
             <Button color="danger" size="sm" type="submit"
               onClick={() => handleDelete(report)}>Delete
             </Button>
-          </h4>  <br/>
+          </h5>  <br/>
           <p id="report-content">{report.content}</p>
         </div>
       )}

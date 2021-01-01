@@ -5,7 +5,7 @@ import { Row, CardGroup} from 'reactstrap';
 const Players = (props) => {
   return (
     <CardGroup>
-      <Row>
+      <Row className="playercard-show">
         {props.players.map(player =>
           <div key={player.id}>
             <PlayerCard key={player.id} player={player}/>
