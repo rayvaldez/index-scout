@@ -1,5 +1,6 @@
 import React from 'react';
 import Stars from './Stars';
+import BadgesInput from './BadgesInput';
 import BadgesContainer from '../containers/BadgesContainer';
 import ReportsContainer from '../containers/ReportsContainer';
 import { Link, Route } from 'react-router-dom';
@@ -10,12 +11,12 @@ const Player = (props) => {
   let player = props.players[props.match.params.id - 1];
 
   return (
-    <Container fluid>
-      <Row>
+    <Container fluid className="player-container">
+      <Row className="player-show-container">
         <Col sm={{ size: 'auto' }}>
-          <h2>
+          <h4>
             {player ? player.name : null}
-          </h2>
+          </h4>
           <div>
             <img src={`/images/${player ? player.image : null}`}
               alt={`${player ? player.name : null}`} width="400" height="250"
@@ -30,19 +31,16 @@ const Player = (props) => {
             Price - £{player ? player.price  : null }
           </p>
           <Stars badges={player ? player.badges : null}/>
-          <Link to={`/players/${player ? player.id : null}/reports`}>View or Submit a Report</Link>
-          <br/>
-          <Link to={`/players/${player ? player.id : null}/badges`}>Vote for Badges!</Link>
+
+        </Col>
+        <Col className="badge-input">
+          <BadgesContainer player={player ? player : null}/>
         </Col>
       </Row>
+      <ReportsContainer player={player ? player : null} />
       <Route path={`/players/${player ? player.id : null}/reports`}
         render={() => (
           <ReportsContainer player={player ? player : null}/>
-        )}
-      />
-      <Route path={`/players/${player ? player.id : null}/badges`}
-        render={() => (
-          <BadgesContainer player={player ? player : null}/>
         )}
       />
     </Container>
