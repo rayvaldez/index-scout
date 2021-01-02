@@ -1,9 +1,8 @@
 import React from 'react';
 import Stars from './Stars';
-import BadgesInput from './BadgesInput';
 import BadgesContainer from '../containers/BadgesContainer';
 import ReportsContainer from '../containers/ReportsContainer';
-import { Link, Route } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import { Container, Row, Col } from 'reactstrap';
 
 const Player = (props) => {

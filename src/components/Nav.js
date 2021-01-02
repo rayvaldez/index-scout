@@ -4,7 +4,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  NavbarText
 } from 'reactstrap';
 
 function Navigation() {
