@@ -190,3 +190,14 @@ div.player-show-container {
 .mr-auto {
   margin-left: 765px;
 }
+
+#about {
+  margin: -6vh 4vh 4vh 4vh;
+  background-color: #fefefe;
+  padding-top: 1vh;
+  padding-left: 3vh;
+  padding-right: 1vh;
+  padding-bottom: 1vh;
+  color: black;
+  border-radius: 1vh;
+}
