@@ -1,12 +1,15 @@
 .App {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("images/landing.png");
-  height: 113vh;
+  background: #0f0c29;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #000C40, #302b63, #000C40);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #000C40, #302b63, #000C40); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  height: 100vh;
+  width: 100vw;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   color: white;
-  padding-bottom: 100%;
+  padding-bottom: 95%;
 }
 
 .App link {
@@ -109,10 +112,6 @@ div.player-show-badge {
 }
 
 div.jumbotron {
-  border-top-style: solid;
-  border-bottom-style: solid;
-  border-top-color: #1a8cff;
-  border-bottom-color: #1a8cff;
   opacity: 0.8;
   background-image: radial-gradient(rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.95));
   background-color: #00264d;
@@ -190,4 +189,15 @@ div.player-show-container {
 
 .mr-auto {
   margin-left: 765px;
+}
+
+#about {
+  margin: -6vh 4vh 4vh 4vh;
+  background-color: #fefefe;
+  padding-top: 1vh;
+  padding-left: 3vh;
+  padding-right: 1vh;
+  padding-bottom: 1vh;
+  color: black;
+  border-radius: 1vh;
 }
